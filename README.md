@@ -36,3 +36,9 @@ https://hub.docker.com/repository/docker/gfarrell/allin
 ## AntiSMASH BGC detection tool
 https://antismash.secondarymetabolites.org/#!/start
 https://doi.org/10.1093/nar/gkab335
+
+
+## Tool options
+### 1. Container
+### 2. Nextflow Conda
+### 3. Local installs (w/ Conda)
