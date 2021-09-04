@@ -10,6 +10,8 @@ Repository contains custom Nextflow scripts and necessary Docker/Singulrity Cont
 Whole microbiome shotgun data requires re-assembly. These two Nextflow pipelines were designed to re-assemble contigs (overlapping stretches of reads) of repective microogranisms in whole shotgun microbiome sequencig FASTQ files. These contigs could then be further extended or directly searched for biosynthetc gene clusters (BGC) using AntiSMASH. Microbiome re-assembly is prone to error given the inbuilt error involved in microbiome sequencing, as a result several QC steps are inbuilt to the pipelines.
 
 ## Method 1: Megahit
+### Samples: ENA/SRA direct 
+
 Nextflow pipeline centred around Megahit assembler <br /> 
 files: 'megahit'
 
@@ -18,6 +20,8 @@ https://github.com/voutcn/megahit
 https://doi.org/10.1093/bioinformatics/btv033
 
 ## Method 2: Biosynthetic MetaSpades
+### Samples: NGS-fetch
+
 files: 'biosynth_metaspades' <br /> 
 Nextflow pipeline centred around MetaSpades assembler, and Biosynthetic MetaSpades scaffolder.
 
