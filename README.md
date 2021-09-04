@@ -1,5 +1,5 @@
 # Nextflow Microbiome AntiSMASH Scripts
-## last update 04/09/2021
+## UNFINISHED: last update 04/09/2021, in the process of cleaning and making user friendly
 
 ## Overall Repository Description
 Repository contains custom Nextflow scripts and necessary Docker/Singulrity Containers for reproducibility. The scripts were coded to carry out the main data analysis step during my MSc project. 
