@@ -44,5 +44,16 @@ https://doi.org/10.1093/nar/gkab335
 
 ## Tool options
 ### 1. Container
+#### 1.1 Directly create with YAML & Dockerfile
+#### 1.2 Download Docker Container from Dockerhub (for local runs) 
+#### 1.3 Download Docker Container via SIngulairty from Dockerhub (for HPC runs)
+
 ### 2. Nextflow Conda
+Directly specifcy in the script for Nextflow to set up the tool in an isolated Conda subsirectory in work folder; multiple runs neding all tools fresh -> remove cleanup after run step from config file.
+
 ### 3. Local installs (w/ Conda)
+Tools can be 
+
+### 4. Mix of Methods
+All three methods above can be mixed as needed; adjust Nextflow scripts and configs as needed.
+eg: FastQC local install & Docker Container MultiQC & Netflow Conda ANtiSMASH... etc...
