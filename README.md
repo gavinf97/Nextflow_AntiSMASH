@@ -12,6 +12,8 @@ Whole microbiome shotgun data requires re-assembly. These two Nextflow pipelines
 ## Method 1: Megahit
 ### Samples: ENA/SRA direct 
 
+### Tools/Dependencies:
+
 Nextflow pipeline centred around Megahit assembler <br /> 
 files: 'megahit'
 
@@ -21,6 +23,8 @@ https://doi.org/10.1093/bioinformatics/btv033
 
 ## Method 2: Biosynthetic MetaSpades
 ### Samples: NGS-fetch
+
+### Tools/Dependencies:
 
 files: 'biosynth_metaspades' <br /> 
 Nextflow pipeline centred around MetaSpades assembler, and Biosynthetic MetaSpades scaffolder.
