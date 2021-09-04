@@ -1,0 +1,28 @@
+#allow insertable sample name to config snakefle run?
+#desined for pipe 1: direct detect
+#conda env stuff
+name: allin
+
+channels:
+  - default
+  - bioconda
+  - conda-forge
+  - agbiome 
+
+dependencies:
+  - fastqc
+  - multiqc
+  - bbtools
+  - megahit
+  - spades
+  - quast
+  - ray
+  - antismash
+  - metavelvet
+  - soapdenovo2
+
+#define samples for snakefile to use
+#samples:
+#1: sample_fastq/ERR011289_75bp/ERR011289_1.fastq 
+#2: sample_fastq/ERR011289_75bp/ERR011289_2.fastq
+#ERR011289_75bp: sample_fastq/ERR011289_75bp

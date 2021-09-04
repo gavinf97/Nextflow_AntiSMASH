@@ -1,0 +1,15 @@
+name: allin
+
+channels:
+  - default
+  - bioconda
+  - conda-forge
+  - agbiome
+
+dependencies:
+  - fastqc
+  - multiqc
+  - bbtools
+  - megahit
+  - spades
+  - soapdenovo2

@@ -1,0 +1,10 @@
+name: quast
+
+channels:
+  - default
+  - bioconda
+  - conda-forge
+  - agbiome
+
+dependencies:
+  - quast

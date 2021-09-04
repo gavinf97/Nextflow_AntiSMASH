@@ -1,0 +1,8 @@
+name: my-pipeline
+channels:
+  - defaults
+  - bioconda
+  - conda-forge
+dependencies:
+  - antismash
+  - pip

@@ -1,0 +1,17 @@
+#set bootstrap for dockerhub base
+Bootstrap: docker
+#set which dockerhub file, nfcore here, has conda 
+From: nfcore/base:1.13.3 
+
+#show it was done
+%runscript
+    echo "Container was created NOW"
+
+#Labels
+%labels
+    Author Gavin F
+    Version v0.0.1
+
+#Help section
+%help
+    Hi, I am no help

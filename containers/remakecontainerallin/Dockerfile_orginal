@@ -1,0 +1,22 @@
+#defines base image to for build, has conda and good for nextflow
+FROM nfcore/base:1.10.2
+
+#Defines build author and why
+LABEL authors="Gavin Farrell" \
+      description="For QC and contig assembly"
+
+#Defines path to loacl  work directory
+WORKDIR ./
+
+#Copies in the local env yaml to set up conda installs for tools needed
+COPY allin.yml ./
+COPY quast.yml ./
+
+#Run command line conda env setup
+RUN conda env create -f allin.yml && conda clean -a
+RUN conda env create -f quast.yml && conda clean -a
+
+#Defines path to conda env to do all the work for pipeline
+ENV PATH /opt/conda/envs/allin/bin:$PATH
+#antismash unique directory, keeps crashing otehrwise
+ENV PATH /opt/conda/envs/quast/bin:$PATH

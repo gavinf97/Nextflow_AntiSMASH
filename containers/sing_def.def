@@ -1,0 +1,10 @@
+Bootstrap: docker
+
+From: continuumio/anaconda3
+
+%files
+    config.yml
+
+%post
+    export PATH="opt/conda/envs/allin/bin:$PATH"
+    /opt/conda/bin/conda env create -f config.yml
