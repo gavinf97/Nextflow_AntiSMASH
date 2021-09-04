@@ -1,21 +1,20 @@
 #!/usr/bin/env nextflow 
-//Base Pipeline (version 3) for Antismash Colorectal Examination - 3/7/21
+//Base Pipeline (version 3) for Antismash Colorectal Examination - 3/9/21
 //Pipeline will intake an SRA/ENA accession code for PE fastq files 
 
 /* Files will be processed with:
-   -Pull in PE fastq files (Step 0)   - Tools: Nextflow SRA Channel grabber
-   -Pre-QC (Step 1+2)                 - Tools: FastQC + MultiQC 
-   -Processed for use (Step 3)        - Tools: BBduk
-   -Post-processing-QC (Step 4 + 5)   - Tools: FastQC + MultiQC
-   -Contig Assembly (Step 6)          - Tools: Megahit
-   -Contig QC (Step 7)                - Tools: MetaQuast
-   -BGC detection (Step 8)            - Tools: Antismash 
+   -Pull in PE fastq files (Step 0)     - Tools: Nextflow SRA Channel grabber
+   -Pre-QC                 (Step 1+2)   - Tools: FastQC + MultiQC 
+   -Processed for use      (Step 3)     - Tools: BBduk
+   -Post-processing-QC     (Step 4 + 5) - Tools: FastQC + MultiQC
+   -Contig Assembly        (Step 6)     - Tools: Megahit
+   -Contig QC              (Step 7)     - Tools: MetaQuast
+   -BGC detection          (Step 8)     - Tools: Antismash 
 */
 
 /* !!!NOTE!!!
    IF ENA HAS 2 VS 3 GZIP FILES -> CHANGE 0 AND 1 IN BBDUK (Step 3)
 */
-//add a change param for user here? eg:2/3 gzip?
 
 //Step 0
 //ENA,SRA accession *input below* 
