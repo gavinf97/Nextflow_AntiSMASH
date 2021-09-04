@@ -12,3 +12,8 @@ Nextflow pipeline centred around Megahit assembler
 
 ## Method 2: Biosynthetic MetaSpades
 Nextflow pipeline centred around MetaSpades assembler, and Biosynthetic MetaSpades scaffolder.
+
+
+## Dockerhub container 
+https://hub.docker.com/repository/docker/gfarrell/allin 
+(requires additional tool updates, a folder will also include YAML & Dockerfile for creating custom Docker container)
