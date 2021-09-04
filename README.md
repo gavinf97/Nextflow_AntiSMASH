@@ -33,10 +33,6 @@ Nextflow pipeline centred around MetaSpades assembler, and Biosynthetic MetaSpad
 https://github.com/ablab/spades
 https://dx.doi.org/10.1101%2Fgr.213959.116
 
-## Dockerhub container 
-https://hub.docker.com/repository/docker/gfarrell/allin 
-(requires additional tool updates, a folder will also include YAML & Dockerfile for creating custom Docker container)
-
 ## AntiSMASH BGC detection tool
 https://antismash.secondarymetabolites.org/#!/start
 https://doi.org/10.1093/nar/gkab335
@@ -45,7 +41,11 @@ https://doi.org/10.1093/nar/gkab335
 ## Tool options
 ### 1. Container
 #### 1.1 Directly create with YAML & Dockerfile
-#### 1.2 Download Docker Container from Dockerhub (for local runs) 
+#### 1.2 Download Docker Container from Dockerhub (for local runs)
+##### Dockerhub container 
+https://hub.docker.com/repository/docker/gfarrell/allin 
+(requires additional tool updates, a folder will also include YAML & Dockerfile for creating custom Docker container)
+
 #### 1.3 Download Docker Container via SIngulairty from Dockerhub (for HPC runs)
 
 ### 2. Nextflow Conda
