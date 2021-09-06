@@ -39,27 +39,25 @@ https://nf-co.re/fetchngs
 ## Directory Descriptions
 ### 'megahit' - Pipeline 1: Megahit
 Nextflow pipeline centred around Megahit assembler <br /> 
+****-Megahit Resources****
+https://github.com/voutcn/megahit
+https://doi.org/10.1093/bioinformatics/btv033
 
 ****Files:****
 1. 'megahit.nf' - Nextflow script for the analysis using Megahit at the core of the pipeline
 2. 'biosynth.config' - Nextflow config file for the Megahit pipeline
 3. 'container' - relevant container files (containers have tools for easier repoducibility and necessary dependencies)
 
--Megahit
-https://github.com/voutcn/megahit
-https://doi.org/10.1093/bioinformatics/btv033
-
 ### 'biosynth_metaspades' - Pipeline 2: Biosynthetic MetaSpades
 Nextflow pipeline centred around MetaSpades assembler, and Biosynthetic MetaSpades scaffolder.
+****-Biosynthetic MetaSpades Resources****
+https://github.com/ablab/spades
+https://dx.doi.org/10.1101%2Fgr.213959.116
 
 ****Files:****
 1. 'biosynth_metaspades.nf' - Nextflow script for the analysis using MetaSpades at the core of the pipeline
 2. 'megahit.config' - Nextflow config file for the MetaSpades pipeline
 3. 'container' - relevant container files (containers have tools for easier repoducibility and necessary dependencies)
-
--Biosynthetic MetaSpades
-https://github.com/ablab/spades
-https://dx.doi.org/10.1101%2Fgr.213959.116
 
 
 ## Tool dependency options
