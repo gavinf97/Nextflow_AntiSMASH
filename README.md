@@ -94,6 +94,6 @@ All three methods above can be mixed as needed; but user must adjust Nextflow sc
 ****eg:**** FastQC tool on local install & MultiQC tool in a Docker Container & AntiSMASH called from Nextflow Conda function. 
 
 
-## EXTRA: AntiSMASH BGC detection tool
+## EXTRA: AntiSMASH BGC detection tool resources
 https://antismash.secondarymetabolites.org/#!/start
 https://doi.org/10.1093/nar/gkab335
