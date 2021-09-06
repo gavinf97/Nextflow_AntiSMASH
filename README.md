@@ -1,6 +1,6 @@
 # Nextflow Scripts: Microbiome Assembly & BGC Detection 
 ## Status: Unfinished (last update 06/09/2021)
-Contact gavinfarrell97gmail.com for any queeries before final completion update
+Contact gavinfarrell97@gmail.com for any queeries before final completion update
 
 ## Overall Repository Description
 Repository contains custom Nextflow scripts and necessary Docker/Singularity containers for reproducibility. The scripts were coded to carry out the primary data analysis involved during my Genomics MSc study. 
