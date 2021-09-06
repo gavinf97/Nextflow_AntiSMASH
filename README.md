@@ -39,7 +39,7 @@ https://nf-co.re/fetchngs
 ## Directory Descriptions
 ### 'megahit' - Pipeline 1: Megahit
 Nextflow pipeline centred around Megahit assembler <br /> 
-****-Megahit Resources****
+****-Megahit Resources**** <br/>
 https://github.com/voutcn/megahit <br/>
 https://doi.org/10.1093/bioinformatics/btv033
 
@@ -50,7 +50,7 @@ https://doi.org/10.1093/bioinformatics/btv033
 
 ### 'biosynth_metaspades' - Pipeline 2: Biosynthetic MetaSpades
 Nextflow pipeline centred around MetaSpades assembler, and Biosynthetic MetaSpades scaffolder.
-****-Biosynthetic MetaSpades Resources****
+****-Biosynthetic MetaSpades Resources**** <br/>
 https://github.com/ablab/spades <br/>
 https://dx.doi.org/10.1101%2Fgr.213959.116
 
