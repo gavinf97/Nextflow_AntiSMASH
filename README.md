@@ -36,14 +36,14 @@ https://nf-co.re/fetchngs
 9. AntiSMASH BGC detection in contigs/scaffolds (AntiSMASH)
 
 
-## Repository Descriptions
+## Directory Descriptions
 ### 'megahit' - Pipeline 1: Megahit
 Nextflow pipeline centred around Megahit assembler <br /> 
 
 ****Files:****
-1. '' - Nextflow script for the analysis
-2. x
-
+1. 'megahit.nf' - Nextflow script for the analysis using Megahit at the core of the pipeline
+2. 'biosynth.config' - Nextflow config file for the Megahit pipeline
+3. 'container' - relevant container files (containers have tools for easier repoducibility and necessary dependencies)
 
 -Megahit
 https://github.com/voutcn/megahit
@@ -53,8 +53,9 @@ https://doi.org/10.1093/bioinformatics/btv033
 Nextflow pipeline centred around MetaSpades assembler, and Biosynthetic MetaSpades scaffolder.
 
 ****Files:****
-1. '' - Nextflow script for the analysis
-2. x
+1. 'biosynth_metaspades.nf' - Nextflow script for the analysis using MetaSpades at the core of the pipeline
+2. 'megahit.config' - Nextflow config file for the MetaSpades pipeline
+3. 'container' - relevant container files (containers have tools for easier repoducibility and necessary dependencies)
 
 -Biosynthetic MetaSpades
 https://github.com/ablab/spades
