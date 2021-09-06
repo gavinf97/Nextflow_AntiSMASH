@@ -8,7 +8,7 @@ Repository contains custom Nextflow scripts and necessary Docker/Singularity con
 ## General Pipeline Purposes
 Whole microbiome shotgun data requires re-assembly to reconstruct the genomes of microbes within the sample. These two Nextflow pipelines were designed to assemble contigs (overlapping stretches of reads) from microogranisms in whole shotgun microbiome sequencing paired end FASTQ files. My MSC study related to biosynthetic gene cluster (BGC) detection in microbiome samples, as a result the pipeline microbiome assembly was necessary and the Nextflow scripts carried this out alongside BGC detection in the assembled samples. I created two different pipelines, the primary differences being the assembly tools used; Megahit and MetaSpades. 
 
-## Descriptions on pipleine workflows and tools 
+## Pipeline workflows and tools used 
 
 ****-Pipeline 1: Megahit****
 Pipeline carries out input FASTQ file QC, FASTQ contig assembly and BGC detection of contigs.
@@ -28,11 +28,12 @@ https://nf-co.re/fetchngs
 2. Paired end FASTQ file QC (FASTQC & MultiQC)
 3. Paired end FASTQ file trimming (BBuk; BBTools suite)
 4. Trimmed paired end FASTQ file QC, monitor the trimming effect (FASTQC & MultiQC)
-5. Trimmed paired end FASTQ file contig assembly -> FASTA w/ contigs (Megahit)
+5. Trimmed paired end FASTQ file contig assembly -> FASTA w/ contigs (MetaSpades)
 6. Contig QC (QUAST)
-7. AntiSMASH biosynthetic gene cluster (BGC) detection (AntiSMASH)
+7.1 Contig extension into longer overlapping scaffolds (non-contiguous sequences) (Biosynthetic MetaSpades)
+7.2 Scaffolds containing BGC sub-selection (Biosynthetic MetaSpades)
+8. AntiSMASH BGC detection in contigs/scaffolds (AntiSMASH)
 
-These contigs could then be further extended or directly searched for biosynthetc gene clusters (BGC) using AntiSMASH. Microbiome re-assembly is prone to error given the inbuilt error involved in microbiome sequencing, as a result several QC steps are inbuilt to the pipelines.
 
 ## File Descriptions
 ### Pipeline 1: Megahit
@@ -64,22 +65,35 @@ https://antismash.secondarymetabolites.org/#!/start
 https://doi.org/10.1093/nar/gkab335
 
 
-## Tool options
+## Tool dependency options
+Nextflow easily allows multiple ways of using tools. Three options described below for user ease;
+
 ### 1. Container
-#### 1.1 Directly create with YAML & Dockerfile
-#### 1.2 Download Docker Container from Dockerhub (for local runs)
+#### 1.1.1 Directly create with YAML & Dockerfile
+If using a local system a Docker container can be made fresh from the provided Dockerfile and YAML files in 'container' directory <br/>
+https://docs.docker.com/engine/reference/builder/
+
+#### 1.1.2 Directly with Singularity Recipe
+If using a HPC system, Singularity is preferred and can create a Singularity Image File (SIF) over a Docker container image, the provided SIF recipe and YAML files are provided in the 'container' directory  <br/>
+https://sylabs.io/guides/2.6/user-guide/container_recipes.html
+
+#### 1.2.1 Download Docker Container from Dockerhub (for local runs)
 ##### Dockerhub container 
-https://hub.docker.com/repository/docker/gfarrell/allin 
-(requires additional tool updates, a folder will also include YAML & Dockerfile for creating custom Docker container)
+https://hub.docker.com/repository/docker/gfarrell/allin <br/>
+(currently requires additional tool updates, a folder will also include YAML & Dockerfile for creating custom Docker container)
 
-#### 1.3 Download Docker Container via SIngulairty from Dockerhub (for HPC runs)
+#### 1.2.2 Download Docker Container via Singulairty from Dockerhub (for HPC runs) <br/>
+Docker has major limitations on a shared HPC; therfore Singulairty is the better option and can convert a Docker image easily to a usable SIF.
+https://sylabs.io/guides/2.6/user-guide/singularity_and_docker.html
 
-### 2. Nextflow Conda
-Directly specifcy in the script for Nextflow to set up the tool in an isolated Conda subsirectory in work folder; multiple runs neding all tools fresh -> remove cleanup after run step from config file.
+### 2. Nextflow Conda function
+Directly specifcy in the script for Nextflow to set up the tool in an isolated Conda subsirectory in work folder; multiple runs neding all tools fresh -> remove cleanup after run step from config file. <br/>
+https://www.nextflow.io/docs/latest/conda.html 
 
 ### 3. Local installs (w/ Conda)
-Tools can be 
+Tools can be all be callable in a local Conda environment on the users system <br/>
+https://docs.conda.io/en/latest/# 
 
-### 4. Mix of Methods
-All three methods above can be mixed as needed; adjust Nextflow scripts and configs as needed.
-eg: FastQC local install & Docker Container MultiQC & Netflow Conda ANtiSMASH... etc...
+### 4. Mix of Methods 1-3
+All three methods above can be mixed as needed; but user must adjust Nextflow scripts and configs as needed.
+****eg:**** FastQC tool on local install & MultiQC tool in a Docker Container & AntiSMASH called from Nextflow Conda function. 
