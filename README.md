@@ -31,9 +31,9 @@ https://nf-co.re/fetchngs
 4. Trimmed paired end FASTQ file QC, monitor the trimming effect (FASTQC & MultiQC)
 5. Trimmed paired end FASTQ file contig assembly -> FASTA w/ contigs (MetaSpades)
 6. Contig QC (QUAST) <br/>
-7.1 Contig extension into longer overlapping scaffolds (non-contiguous sequences) (Biosynthetic MetaSpades) <br/>
-7.2 Scaffolds containing BGC detection (Biosynthetic MetaSpades)<br/>
-8. AntiSMASH BGC detection in contigs/scaffolds (AntiSMASH)
+7. Contig extension into longer overlapping scaffolds (non-contiguous sequences) (Biosynthetic MetaSpades) <br/>
+8. Scaffolds containing BGC detection (Biosynthetic MetaSpades)<br/>
+9. AntiSMASH BGC detection in contigs/scaffolds (AntiSMASH)
 
 
 ## Repository Descriptions
