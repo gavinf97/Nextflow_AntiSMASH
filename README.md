@@ -3,7 +3,7 @@
 Contact gavinfarrell97@gmail.com for any queeries before final completion update
 
 ## Overall Repository Description
-Repository contains custom Nextflow scripts and necessary Docker/Singularity containers for reproducibility. The scripts were coded to carry out the primary data analysis involved during my Genomics MSc study. 
+Repository contains custom Nextflow scripts and necessary Docker/Singularity containers for reproducibility. The scripts were coded to carry out the primary data analysis involved during my MSc project. 
 
 ## General Pipeline Purposes
 Whole microbiome shotgun data requires re-assembly to reconstruct the genomes of microbes within the sample. These two Nextflow pipelines were designed to assemble contigs (overlapping stretches of reads) from microogranisms in whole shotgun microbiome sequencing paired end FASTQ files. My MSC study related to biosynthetic gene cluster (BGC) detection in microbiome samples, as a result the pipeline microbiome assembly was necessary and the Nextflow scripts carried this out alongside BGC detection in the assembled samples. I created two different pipelines, the primary differences being the assembly tools used; Megahit and MetaSpades. 
