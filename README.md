@@ -11,7 +11,7 @@ Whole microbiome shotgun data requires re-assembly to reconstruct the genomes of
 ## Pipeline workflows and tools used 
 
 ****-Pipeline 1: Megahit**** <br/>
-Pipeline carries out input FASTQ file QC, FASTQ contig assembly and BGC detection of contigs.
+Pipeline carries out FASTQ file QC, FASTQ contig assembly and BGC detection of contigs.
 
 0. Sample input; use direct ENA accession input
 1. Paired end FASTQ file QC (FASTQC & MultiQC)
@@ -22,7 +22,7 @@ Pipeline carries out input FASTQ file QC, FASTQ contig assembly and BGC detectio
 6. AntiSMASH biosynthetic gene cluster (BGC) detection (AntiSMASH)
 
 ****-Pipeline 2: Biosynthetic MetaSpades**** <br/>
-Pipeline carries out input FASTQ file QC, FASTQ contig and subsequent scaffold assembly. After assemblies BGC detection is run by AntiSMASH and Biosyntetic MetaSpades.
+Pipeline carries out FASTQ file QC, FASTQ contig and subsequent scaffold assembly. After assemblies BGC detection is run by AntiSMASH and Biosyntetic MetaSpades.
 
 0. Sample input; use Nextflow core pipeline 'NGS-fetch' to download FASTQ files for this pipeline <br/>
 https://nf-co.re/fetchngs
