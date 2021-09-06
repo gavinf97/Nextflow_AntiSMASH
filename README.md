@@ -22,8 +22,9 @@ Pipeline carries out input FASTQ file QC, FASTQ contig assembly and BGC detectio
 6. AntiSMASH biosynthetic gene cluster (BGC) detection (AntiSMASH)
 
 ****-Pipeline 2: Biosynthetic MetaSpades****
+Pipeline carries out input FASTQ file QC, FASTQ contig and subsequent scaffold assembly. After assemblies BGC detection is run by AntiSMASH and Biosyntetic MetaSpades.
 
-0. Sample input; use Nextflow core pipeline 'NGS-fetch' <br/>
+0. Sample input; use Nextflow core pipeline 'NGS-fetch' to download FASTQ files for this pipeline <br/>
 https://nf-co.re/fetchngs
 2. Paired end FASTQ file QC (FASTQC & MultiQC)
 3. Paired end FASTQ file trimming (BBuk; BBTools suite)
@@ -31,38 +32,33 @@ https://nf-co.re/fetchngs
 5. Trimmed paired end FASTQ file contig assembly -> FASTA w/ contigs (MetaSpades)
 6. Contig QC (QUAST)
 7.1 Contig extension into longer overlapping scaffolds (non-contiguous sequences) (Biosynthetic MetaSpades)
-7.2 Scaffolds containing BGC sub-selection (Biosynthetic MetaSpades)
+7.2 Scaffolds containing BGC detection (Biosynthetic MetaSpades)
 8. AntiSMASH BGC detection in contigs/scaffolds (AntiSMASH)
 
 
-## File Descriptions
-### Pipeline 1: Megahit
-#### Samples: ENA/SRA direct 
-
-#### Tools/Dependencies:
-
+## Repository Descriptions
+### 'megahit' - Pipeline 1: Megahit
 Nextflow pipeline centred around Megahit assembler <br /> 
-files: 'megahit'
+
+****Files:****
+1. '' - Nextflow script for the analysis
+2. x
+
 
 -Megahit
 https://github.com/voutcn/megahit
 https://doi.org/10.1093/bioinformatics/btv033
 
-### Pipeline 2: Biosynthetic MetaSpades
-#### Samples: NGS-fetch
-
-##### Tools/Dependencies:
-
-files: 'biosynth_metaspades' <br /> 
+### 'biosynth_metaspades' - Pipeline 2: Biosynthetic MetaSpades
 Nextflow pipeline centred around MetaSpades assembler, and Biosynthetic MetaSpades scaffolder.
+
+****Files:****
+1. '' - Nextflow script for the analysis
+2. x
 
 -Biosynthetic MetaSpades
 https://github.com/ablab/spades
 https://dx.doi.org/10.1101%2Fgr.213959.116
-
-## AntiSMASH BGC detection tool
-https://antismash.secondarymetabolites.org/#!/start
-https://doi.org/10.1093/nar/gkab335
 
 
 ## Tool dependency options
@@ -97,3 +93,8 @@ https://docs.conda.io/en/latest/#
 ### 4. Mix of Methods 1-3
 All three methods above can be mixed as needed; but user must adjust Nextflow scripts and configs as needed.
 ****eg:**** FastQC tool on local install & MultiQC tool in a Docker Container & AntiSMASH called from Nextflow Conda function. 
+
+
+## EXTRA: AntiSMASH BGC detection tool
+https://antismash.secondarymetabolites.org/#!/start
+https://doi.org/10.1093/nar/gkab335
