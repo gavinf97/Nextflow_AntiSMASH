@@ -49,7 +49,7 @@ https://doi.org/10.1093/bioinformatics/btv033
 3. 'container' - relevant container files (containers have tools for easier repoducibility and necessary dependencies)
 
 ### 'biosynth_metaspades' - Pipeline 2: Biosynthetic MetaSpades
-Nextflow pipeline centred around MetaSpades assembler, and Biosynthetic MetaSpades scaffolder.
+Nextflow pipeline centred around Biosynthetic MetaSpades assembler. <br/>
 ****-Biosynthetic MetaSpades Resources**** <br/>
 https://github.com/ablab/spades <br/>
 https://dx.doi.org/10.1101%2Fgr.213959.116
