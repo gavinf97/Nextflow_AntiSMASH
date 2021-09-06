@@ -22,7 +22,7 @@ Pipeline carries out FASTQ file QC, FASTQ contig assembly and BGC detection of c
 6. AntiSMASH biosynthetic gene cluster (BGC) detection (AntiSMASH)
 
 ****-Pipeline 2: Biosynthetic MetaSpades**** <br/>
-Pipeline carries out FASTQ file QC, FASTQ contig and subsequent scaffold assembly. After assemblies BGC detection is run by AntiSMASH and Biosyntetic MetaSpades.
+Pipeline carries out FASTQ file QC, FASTQ contig and subsequent scaffold assembly. After assemblies BGC detection is run by AntiSMASH and Biosynthetic MetaSpades.
 
 0. Sample input; use Nextflow core pipeline 'NGS-fetch' to download FASTQ files for this pipeline <br/>
 https://nf-co.re/fetchngs
