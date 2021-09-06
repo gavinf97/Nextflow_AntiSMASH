@@ -90,7 +90,7 @@ Tools can be all be callable in a local Conda environment on the users system <b
 https://docs.conda.io/en/latest/# 
 
 ### 4. Mix of Methods 1-3
-All three methods above can be mixed as needed; but user must adjust Nextflow scripts and configs as needed.
+All three methods above can be mixed as needed; but user must adjust Nextflow scripts and configs as needed. <br/>
 ****eg:**** FastQC tool on local install & MultiQC tool in a Docker Container & AntiSMASH called from Nextflow Conda function. 
 
 
