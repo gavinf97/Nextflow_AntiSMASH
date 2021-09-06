@@ -95,5 +95,5 @@ All three methods above can be mixed as needed; but user must adjust Nextflow sc
 
 
 ## EXTRA: AntiSMASH BGC detection tool resources
-https://antismash.secondarymetabolites.org/#!/start
+https://antismash.secondarymetabolites.org/#!/start <br/>
 https://doi.org/10.1093/nar/gkab335
